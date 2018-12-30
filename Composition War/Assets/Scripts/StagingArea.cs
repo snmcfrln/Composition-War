@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class StagingArea : MonoBehaviour {
 
+    SpriteRenderer rend;
     public Color startColor;
     public Color hoverColor;
-    Renderer rend;
+
+    public bool hasSpawned = false;
 
     // Use this for initialization
     void Start ()
     {
-        rend = GetComponent<Renderer>();
+        rend = GetComponent<SpriteRenderer>();
         startColor = rend.material.color;
         hoverColor = new Color(startColor.r + 0.1f, startColor.g + 0.1f, startColor.b + 0.1f);
 	}

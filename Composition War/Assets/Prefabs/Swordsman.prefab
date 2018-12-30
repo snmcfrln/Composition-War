@@ -21,7 +21,9 @@ GameObject:
   - component: {fileID: 4837633151562690}
   - component: {fileID: 212553015831848570}
   - component: {fileID: 61555679373488342}
-  - component: {fileID: 114408317590773896}
+  - component: {fileID: 114656754853808832}
+  - component: {fileID: 114791000612542138}
+  - component: {fileID: 50094873801214918}
   m_Layer: 0
   m_Name: Swordsman
   m_TagString: Untagged
@@ -42,6 +44,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50094873801214918
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1395382074669886}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61555679373488342
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -67,7 +89,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114408317590773896
+--- !u!114 &114656754853808832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1395382074669886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb7b36dbe437ab4d9903df6bcd49e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: []
+--- !u!114 &114791000612542138
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,9 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38e36f608f145b40b66f2964882441e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameHandler: {fileID: 0}
-  waveHandler: {fileID: 0}
   isActive: 0
+  hasActivated: 0
 --- !u!212 &212553015831848570
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -114,10 +147,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 162145913
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 800a59df3d6d0f24ca3bee8afc7e1ec8, type: 3}
-  m_Color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+  m_Sprite: {fileID: 21300736, guid: f33e806d531f36c46aa4b029c1e8690b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

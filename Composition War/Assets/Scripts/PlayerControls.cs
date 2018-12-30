@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerControls : MonoBehaviour
 {
-    public GameObject unit;
+    private GameObject unit;
+    public GameObject unitHandler;
+    public UnitSelector unitScript;
 
     // Use this for initialization
     void Start()
     {
-
+        unitScript = unitHandler.GetComponent<UnitSelector>();
     }
 
     // Update is called once per frame
@@ -32,7 +36,21 @@ public class PlayerControls : MonoBehaviour
             }
             if(hit.collider.gameObject.tag == "StagingArea")
             {
-                Instantiate(unit, hit.transform.position, hit.transform.rotation);
+                StagingArea stage = hit.transform.GetComponent<StagingArea>();
+                Debug.Log(mousePos2D.x);
+                //Instantiate(unit, hit.transform.position, hit.transform.rotation);
+                //unitSelector.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
+                //unitSelector.SetActive(true);
+                if(unitScript.selectedUnit != null && !stage.hasSpawned)
+                {
+                    stage.hasSpawned = true;
+                    unit = unitScript.selectedUnit;
+                    Instantiate(unit, hit.transform.position, hit.transform.rotation);
+                }
+                else
+                {
+                    return;
+                }
             }
         }
     }

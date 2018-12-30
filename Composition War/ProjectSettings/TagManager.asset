@@ -15,9 +15,9 @@ TagManager:
   - 
   - 
   - Bridge
-  - Ground
+  - Walkabale
   - StagingArea
-  - 
+  - Unwalkable
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Building
+    uniqueID: 1418418573
     locked: 0
   - name: Unit
     uniqueID: 162145913
